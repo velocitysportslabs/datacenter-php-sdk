@@ -1,0 +1,62 @@
+{
+    "name": "focus-sports-labs/fsl-data-center",
+    "description": "PHP SDK for Focus Sports Labs Data Center APIs",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Abdul Kudus",
+            "email": "abdulkudus2922@gmail.com"
+        }
+    ],
+    "keywords": [
+        "fsl",
+        "data center",
+        "apis"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.0",
+        "ext-json": "*",
+        "php-http/client-common": "^2.7",
+        "php-http/discovery": "^1.19",
+        "psr/http-client": "^1.0",
+        "psr/http-factory": "^1.0",
+        "symfony/options-resolver": "^6.4",
+        "thecodingmachine/safe": "^2.5"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.13",
+        "nyholm/psr7": "^1.8",
+        "pestphp/pest": "^2.29",
+        "pestphp/pest-plugin-drift": "^2.5",
+        "php-http/mock-client": "^1.6",
+        "phpstan/phpstan": "^1.10",
+        "symfony/http-client": "^6.4",
+        "symfony/var-dumper": "^6.4",
+        "thecodingmachine/phpstan-safe-rule": "^1.2"
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "FocusSportsLabs\\FslDataCenter\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FocusSportsLabs\\FslDataCenter\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "./vendor/bin/pest"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
