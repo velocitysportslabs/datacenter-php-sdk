@@ -14,10 +14,9 @@ use Http\Client\Promise\HttpFulfilledPromise;
 use Http\Client\Promise\HttpRejectedPromise;
 use Nyholm\Psr7\Request;
 use Nyholm\Psr7\Response;
-use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
-it('handles the appropriate response for status codes', function (ResponseInterface $response, ?ExceptionContract $exception = null) {
+it('handles the appropriate response for status codes', function (ResponseInterface $response, ?ExceptionContract $exception = null): void {
     $request = new Request('GET', 'https://somewhere.com');
 
     $promise = new HttpFulfilledPromise($response);
@@ -26,13 +25,13 @@ it('handles the appropriate response for status codes', function (ResponseInterf
 
     $result = $plugin->handleRequest(
         $request,
-        fn () => $promise,
-        fn () => $promise,
+        fn() => $promise,
+        fn() => $promise,
     );
 
     if ($exception) {
         expect($result)->toBeInstanceOf(HttpRejectedPromise::class);
-        expect(fn () => $result->wait())->toThrow($exception::class, $exception->getMessage());
+        expect(fn() => $result->wait())->toThrow($exception::class, $exception->getMessage());
     } else {
         expect($result)->toBeInstanceOf(HttpFulfilledPromise::class);
         $result->wait();
