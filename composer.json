@@ -28,7 +28,6 @@
         "laravel/pint": "^1.13",
         "nyholm/psr7": "^1.8",
         "pestphp/pest": "^2.29",
-        "pestphp/pest-plugin-drift": "^2.5",
         "php-http/mock-client": "^1.6",
         "phpstan/phpstan": "^1.10",
         "symfony/http-client": "^6.4",

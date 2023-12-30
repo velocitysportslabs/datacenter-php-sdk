@@ -113,7 +113,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security
 
-If you've found a bug regarding security please mail [security@spatie.be](mailto:security@spatie.be) instead of using the issue tracker.
+If you've found a bug regarding security please mail [abdulkudus2922@gmail.com](mailto:abdulkudus2922@gmail.com) instead of using the issue tracker.
 
 ## Credits
 
