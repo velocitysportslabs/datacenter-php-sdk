@@ -41,8 +41,8 @@ class Client
 
         $this->httpClient->addPlugin(
             new BaseUriPlugin(
-                Psr17FactoryDiscovery::findUriFactory()->createUri($options->getUri())
-            )
+                Psr17FactoryDiscovery::findUriFactory()->createUri($options->getUri()),
+            ),
         );
 
         $version = null;
@@ -59,8 +59,8 @@ class Client
                     'X-Authorization' => $options->getAuthToken(),
                     'Content-Type' => 'application/json',
                     'Accept' => 'application/json',
-                ]
-            )
+                ],
+            ),
         );
     }
 

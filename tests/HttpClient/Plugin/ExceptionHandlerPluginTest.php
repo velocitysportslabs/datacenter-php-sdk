@@ -45,7 +45,7 @@ it('handles the appropriate response for status codes', function (ResponseInterf
         'response' => new Response(
             400,
             ['Content-Type' => 'application/json'],
-            json_encode(['message' => 'Bad data submitted'])
+            json_encode(['message' => 'Bad data submitted']),
         ),
         'exception' => new BadRequestException('Bad data submitted', 400),
     ],
@@ -53,7 +53,7 @@ it('handles the appropriate response for status codes', function (ResponseInterf
         'response' => new Response(
             401,
             ['Content-Type' => 'application/json'],
-            json_encode(['message' => 'Unauthenticated'])
+            json_encode(['message' => 'Unauthenticated']),
         ),
         'exception' => new AuthorizationException('Unauthenticated', 401),
     ],
@@ -61,7 +61,7 @@ it('handles the appropriate response for status codes', function (ResponseInterf
         'response' => new Response(
             403,
             ['Content-Type' => 'application/json'],
-            json_encode(['message' => 'Permission denied'])
+            json_encode(['message' => 'Permission denied']),
         ),
         'exception' => new ForbiddenException('Permission denied', 403),
     ],
@@ -69,7 +69,7 @@ it('handles the appropriate response for status codes', function (ResponseInterf
         'response' => new Response(
             404,
             ['Content-Type' => 'application/json'],
-            json_encode(['message' => 'File not found.'])
+            json_encode(['message' => 'File not found.']),
         ),
         'exception' => new ResourceNotFoundException('File not found.', 404),
     ],
@@ -83,13 +83,13 @@ it('handles the appropriate response for status codes', function (ResponseInterf
                 [
                     'message' => 'Invalid data submitted',
                     'errors' => [
-                        'name' => ['Field is required']
+                        'name' => ['Field is required'],
                     ],
-                ]
-            )
+                ],
+            ),
         ),
         'exception' => new ValidationException('Invalid data submitted', 422, [
-            'name' => ['Field is required']
+            'name' => ['Field is required'],
         ]),
     ],
     'Rate Limit Exceeded' => [
@@ -100,7 +100,7 @@ it('handles the appropriate response for status codes', function (ResponseInterf
                 'X-RateLimit-Remaining' => 0,
                 'X-RateLimit-Limit' => 5000,
             ],
-            json_encode(['message' => 'Too many requests.'])
+            json_encode(['message' => 'Too many requests.']),
         ),
         'exception' => new RateLimitExceededException('Too many requests.', 429, 5000, 0, 42),
     ],
@@ -110,7 +110,7 @@ it('handles the appropriate response for status codes', function (ResponseInterf
             [
                 'Content-Type' => 'application/json',
             ],
-            json_encode(['message' => 'Something went wrong with executing your query'])
+            json_encode(['message' => 'Something went wrong with executing your query']),
         ),
         'exception' => new InternalServerErrorException('Something went wrong with executing your query', 500),
     ],
@@ -121,7 +121,7 @@ it('handles the appropriate response for status codes', function (ResponseInterf
             [
                 'Content-Type' => 'application/json',
             ],
-            json_encode(['message' => 'Something went wrong with executing your query'])
+            json_encode(['message' => 'Something went wrong with executing your query']),
         ),
         'exception' => new UnknownErrorException('Something went wrong with executing your query', 502, ['message' => 'Something went wrong with executing your query']),
     ],
