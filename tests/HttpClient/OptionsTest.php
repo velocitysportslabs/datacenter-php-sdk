@@ -8,7 +8,7 @@ it('can create an options object with default values', function (): void {
     $options = new Options([
         'user_agent' => 'My Custom SDK',
         'auth_token' => 'token',
-        'origin' => 'origin'
+        'origin' => 'origin',
     ]);
 
     expect($options)->toBeInstanceOf(Options::class);
@@ -16,7 +16,7 @@ it('can create an options object with default values', function (): void {
         'uri' => 'http://fsl-data-center.test', // TODO: change this url to use the production url by default
         'user_agent' => 'My Custom SDK',
         'auth_token' => 'token',
-        'origin' => 'origin'
+        'origin' => 'origin',
     ]);
 });
 
@@ -25,7 +25,7 @@ it('sets the options to the value passed when instantiating options object', fun
         'uri' => 'https://somewhere.com',
         'user_agent' => 'Testing Agent',
         'auth_token' => 'token',
-        'origin' => 'origin'
+        'origin' => 'origin',
     ]);
 
     expect($options)->toBeInstanceOf(Options::class);
@@ -33,7 +33,7 @@ it('sets the options to the value passed when instantiating options object', fun
         'uri' => 'https://somewhere.com',
         'user_agent' => 'Testing Agent',
         'auth_token' => 'token',
-        'origin' => 'origin'
+        'origin' => 'origin',
     ]);
 });
 
@@ -41,7 +41,7 @@ it('fails if an invalid option is passed', function (): void {
     new Options([
         'invalid' => 'https://somewhere.com',
         'auth_token' => 'token',
-        'origin' => 'origin'
+        'origin' => 'origin',
     ]);
 })->throws(UndefinedOptionsException::class);
 
@@ -49,14 +49,14 @@ it('validates the values passed when creating an option', function (): void {
     new Options([
         'uri' => 1,
         'auth_token' => 'token',
-        'origin' => 'origin'
+        'origin' => 'origin',
     ]);
 })->throws(InvalidOptionsException::class);
 
 it('can get the uri', function (): void {
     $options = new Options([
         'auth_token' => 'token',
-        'origin' => 'origin'
+        'origin' => 'origin',
     ]);
 
     expect($options->getUri())
@@ -68,7 +68,7 @@ it('can get the user agent', function (): void {
     $options = new Options([
         'auth_token' => 'token',
         'origin' => 'origin',
-        'user_agent' => 'My Custom SDK'
+        'user_agent' => 'My Custom SDK',
     ]);
 
     expect($options->getUserAgent())
@@ -79,7 +79,7 @@ it('can get the user agent', function (): void {
 it('can get the auth token', function (): void {
     $options = new Options([
         'auth_token' => 'token',
-        'origin' => 'origin'
+        'origin' => 'origin',
     ]);
 
     expect($options->getAuthToken())
@@ -90,7 +90,7 @@ it('can get the auth token', function (): void {
 it('can get the origin', function (): void {
     $options = new Options([
         'origin' => 'origin',
-        'auth_token' => 'token'
+        'auth_token' => 'token',
     ]);
 
     expect($options->getOrigin())
