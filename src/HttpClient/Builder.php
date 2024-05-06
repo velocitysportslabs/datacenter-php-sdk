@@ -35,7 +35,7 @@ class Builder
     public function __construct(
         ?ClientInterface $client = null,
         ?RequestFactoryInterface $requestFactory = null,
-        ?StreamFactoryInterface $streamFactory = null
+        ?StreamFactoryInterface $streamFactory = null,
     ) {
         $this->client = $client ?: Psr18ClientDiscovery::find();
         $this->requestFactory = $requestFactory ?: Psr17FactoryDiscovery::findRequestFactory();
@@ -55,7 +55,7 @@ class Builder
             $this->pluginClient = new HttpMethodsClient(
                 $pluginClient,
                 $this->requestFactory,
-                $this->streamFactory
+                $this->streamFactory,
             );
         }
 

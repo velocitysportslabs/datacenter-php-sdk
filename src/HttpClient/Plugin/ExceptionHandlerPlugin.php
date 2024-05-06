@@ -39,7 +39,7 @@ final class ExceptionHandlerPlugin implements Plugin
                 422 => throw new Exceptions\ValidationException($message, $statusCode, $content['errors']),
                 429 => throw new Exceptions\RateLimitExceededException($message, $statusCode, $rateLimit, $rateLimitRemaining, $rateLimitRetryAfter),
                 500 => throw new Exceptions\InternalServerErrorException($message, $statusCode),
-                default => throw new Exceptions\UnknownErrorException($message, $statusCode, $content)
+                default => throw new Exceptions\UnknownErrorException($message, $statusCode, $content),
             };
         });
     }

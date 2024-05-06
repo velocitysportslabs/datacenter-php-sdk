@@ -13,7 +13,7 @@ class PlayerRequest extends AbstractRequest
     {
         return new Collection(
             $this->get('v1/players', $params),
-            Player::class
+            Player::class,
         );
     }
 
@@ -29,7 +29,7 @@ class PlayerRequest extends AbstractRequest
     {
         return new Collection(
             $this->get("v1/players/{$player}/clubs", $params),
-            Club::class
+            Club::class,
         );
     }
 
@@ -37,7 +37,7 @@ class PlayerRequest extends AbstractRequest
     {
         return new Collection(
             $this->get("v1/players/{$player}/career-path", $params),
-            CareerInfo::class
+            CareerInfo::class,
         );
     }
 }

@@ -9,7 +9,7 @@ class Options
     private array $options;
 
     public function __construct(
-        array $options = []
+        array $options = [],
     ) {
         $resolver = new OptionsResolver();
         $this->configureOptions($resolver);
