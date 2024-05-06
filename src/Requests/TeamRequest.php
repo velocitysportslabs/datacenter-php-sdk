@@ -12,7 +12,7 @@ class TeamRequest extends AbstractRequest
     {
         return new Collection(
             $this->get('v1/teams', $params),
-            Team::class
+            Team::class,
         );
     }
 
@@ -28,7 +28,7 @@ class TeamRequest extends AbstractRequest
     {
         return new Collection(
             $this->get("v1/teams/{$team}/players", $params),
-            Player::class
+            Player::class,
         );
     }
 }

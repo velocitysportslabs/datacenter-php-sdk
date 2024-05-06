@@ -12,7 +12,7 @@ use function Safe\json_encode;
 abstract class AbstractRequest implements RequestContract
 {
     public function __construct(
-        protected Client $client
+        protected Client $client,
     ) {}
 
     /**
@@ -49,7 +49,7 @@ abstract class AbstractRequest implements RequestContract
         return $this->postRaw(
             $path,
             $this->createJsonBody($parameters),
-            $requestHeaders
+            $requestHeaders,
         );
     }
 
@@ -61,7 +61,7 @@ abstract class AbstractRequest implements RequestContract
         $response = $this->client->getClient()->post(
             $path,
             $requestHeaders,
-            $body
+            $body,
         );
 
         return ResponseMediator::getContent($response);
@@ -75,7 +75,7 @@ abstract class AbstractRequest implements RequestContract
         $response = $this->client->getClient()->patch(
             $path,
             $requestHeaders,
-            $this->createJsonBody($parameters)
+            $this->createJsonBody($parameters),
         );
 
         return ResponseMediator::getContent($response);
@@ -89,7 +89,7 @@ abstract class AbstractRequest implements RequestContract
         $response = $this->client->getClient()->put(
             $path,
             $requestHeaders,
-            $this->createJsonBody($parameters)
+            $this->createJsonBody($parameters),
         );
 
         return ResponseMediator::getContent($response);
@@ -103,7 +103,7 @@ abstract class AbstractRequest implements RequestContract
         $response = $this->client->getClient()->delete(
             $path,
             $requestHeaders,
-            $this->createJsonBody($parameters)
+            $this->createJsonBody($parameters),
         );
 
         return ResponseMediator::getContent($response);

@@ -10,7 +10,7 @@ final class ValidationException extends Exception implements ExceptionContract
     public function __construct(
         string $message,
         int $code,
-        public readonly array $errors
+        public readonly array $errors,
     ) {
         parent::__construct(
             message: $message,

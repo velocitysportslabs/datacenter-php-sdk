@@ -11,7 +11,7 @@ class CurrencyRequest extends AbstractRequest
     {
         return new Collection(
             $this->get('v1/currencies'),
-            Currency::class
+            Currency::class,
         );
     }
 }
