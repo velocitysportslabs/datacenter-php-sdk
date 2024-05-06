@@ -14,7 +14,7 @@ it('should pass get request to client', function (): void {
     $httpClient = mockHttpClient(
         'get',
         ['/path?param1=param1value', ['header1' => 'header1value']],
-        $expectedArray
+        $expectedArray,
     );
 
     $client = mockClient($httpClient);
@@ -33,7 +33,7 @@ it('should pass post request to client', function (): void {
     $httpClient = mockHttpClient(
         'post',
         ['/path', ['option1' => 'option1value'], json_encode(['param1' => 'param1value'])],
-        $expectedArray
+        $expectedArray,
     );
 
     $client = mockClient($httpClient);
@@ -51,7 +51,7 @@ it('should pass patch request to client', function (): void {
     $httpClient = mockHttpClient(
         'patch',
         ['/path', ['option1' => 'option1value'], json_encode(['param1' => 'param1value'])],
-        $expectedArray
+        $expectedArray,
     );
 
     $client = mockClient($httpClient);
@@ -69,7 +69,7 @@ it('should pass put request to client', function (): void {
     $httpClient = mockHttpClient(
         'put',
         ['/path', ['option1' => 'option1value'], json_encode(['param1' => 'param1value'])],
-        $expectedArray
+        $expectedArray,
     );
 
     $client = mockClient($httpClient);
@@ -88,7 +88,7 @@ it('should pass delete request to client', function (): void {
     $httpClient = mockHttpClient(
         'delete',
         ['/path', ['option1' => 'option1value'], json_encode(['param1' => 'param1value'])],
-        $expectedArray
+        $expectedArray,
     );
 
     $client = mockClient($httpClient);
@@ -140,7 +140,7 @@ function getClientWithHttpMethodsMock(): Client
             'auth_token' => 'token',
             'origin' => 'origin',
         ]),
-        new Builder(getHttpMethodsMock())
+        new Builder(getHttpMethodsMock()),
     );
 }
 
@@ -160,7 +160,7 @@ function getPSR7Response(array $expectedArray): Response
     return new Response(
         200,
         ['Content-Type' => 'application/json'],
-        json_encode($expectedArray)
+        json_encode($expectedArray),
     );
 }
 

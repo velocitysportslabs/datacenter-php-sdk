@@ -12,7 +12,7 @@ class AssociationRequest extends AbstractRequest
     {
         return new Collection(
             $this->get('v1/associations', $params),
-            Association::class
+            Association::class,
         );
     }
 
@@ -28,7 +28,7 @@ class AssociationRequest extends AbstractRequest
     {
         return new Collection(
             $this->get("v1/associations/{$association}/clubs", $params),
-            Club::class
+            Club::class,
         );
     }
 }
