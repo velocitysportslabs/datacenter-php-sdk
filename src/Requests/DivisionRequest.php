@@ -11,7 +11,7 @@ class DivisionRequest extends AbstractRequest
     {
         return new Collection(
             $this->get('v1/divisions', $params),
-            Division::class
+            Division::class,
         );
     }
 }

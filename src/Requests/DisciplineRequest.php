@@ -11,7 +11,7 @@ class DisciplineRequest extends AbstractRequest
     {
         return new Collection(
             $this->get('v1/disciplines', $params),
-            Discipline::class
+            Discipline::class,
         );
     }
 }
