@@ -11,7 +11,7 @@ it('can create a new Client', function (): void {
         new Options([
             'auth_token' => 'token',
             'origin' => 'origin',
-        ])
+        ]),
     );
 
     expect($client)
@@ -24,7 +24,7 @@ it('can get the attached client from the Client', function (): void {
             new Options([
                 'auth_token' => 'token',
                 'origin' => 'origin',
-            ])
+            ]),
         ))->getClient(),
     )->toBeInstanceOf(HttpMethodsClientInterface::class);
 });
@@ -34,7 +34,7 @@ it('should get request instance using the magic method', function ($apiName, $cl
         new Options([
             'auth_token' => 'token',
             'origin' => 'origin',
-        ])
+        ]),
     );
 
     expect($client->{$apiName}())->toBeInstanceOf($class);
@@ -44,8 +44,8 @@ it('should get the request using the api method', function ($apiName, $class): v
     $client = new Client(
         new Options([
             'auth_token' => 'token',
-            'origin' => 'origin'
-        ])
+            'origin' => 'origin',
+        ]),
     );
 
     expect($client->request($apiName))->toBeInstanceOf($class);
@@ -54,7 +54,7 @@ it('should get the request using the api method', function ($apiName, $class): v
 it('should throw exception if request does not exist using the magic method', function (): void {
     $client = new Client(new Options([
         'auth_token' => 'token',
-        'origin' => 'origin'
+        'origin' => 'origin',
     ]));
 
     $client->doesNotExist();
@@ -63,7 +63,7 @@ it('should throw exception if request does not exist using the magic method', fu
 it('should throw exception if request does not exist using the api method', function (): void {
     $client = new Client(new Options([
         'auth_token' => 'token',
-        'origin' => 'origin'
+        'origin' => 'origin',
     ]));
 
     $client->request('doesNotExist');

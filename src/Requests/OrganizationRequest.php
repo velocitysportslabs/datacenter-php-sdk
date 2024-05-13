@@ -12,7 +12,7 @@ class OrganizationRequest extends AbstractRequest
     {
         return new Collection(
             $this->get('v1/organizations', $params),
-            Organization::class
+            Organization::class,
         );
     }
 
@@ -28,7 +28,7 @@ class OrganizationRequest extends AbstractRequest
     {
         return new Collection(
             $this->get("v1/organizations/{$organization}/clubs", $params),
-            Club::class
+            Club::class,
         );
     }
 }

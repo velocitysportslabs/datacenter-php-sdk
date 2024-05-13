@@ -24,7 +24,7 @@ abstract class TestCase extends BaseTestCase
         return new Client(
             new Options([
                 'client_builder' => new Builder($this->mockClient),
-            ])
+            ]),
         );
     }
 }
