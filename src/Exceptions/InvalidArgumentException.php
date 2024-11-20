@@ -1,7 +1,7 @@
 <?php
 
-namespace FocusSportsLabs\FslDataCenter\Exceptions;
+namespace VelocitySportsLabs\DataCenter\Exceptions;
 
-use FocusSportsLabs\FslDataCenter\Exceptions\Contracts\ExceptionContract;
+use VelocitySportsLabs\DataCenter\Exceptions\Contracts\ExceptionContract;
 
 class InvalidArgumentException extends \InvalidArgumentException implements ExceptionContract {}

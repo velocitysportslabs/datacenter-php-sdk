@@ -1,6 +1,6 @@
 <?php
 
-namespace FocusSportsLabs\FslDataCenter\DataObjects;
+namespace VelocitySportsLabs\DataCenter\DataObjects;
 
 use Exception;
 use Safe\DateTime;

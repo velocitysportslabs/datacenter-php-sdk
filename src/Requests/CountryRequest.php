@@ -1,10 +1,10 @@
 <?php
 
-namespace FocusSportsLabs\FslDataCenter\Requests;
+namespace VelocitySportsLabs\DataCenter\Requests;
 
-use FocusSportsLabs\FslDataCenter\DataObjects\Contracts\DataObjectContract;
-use FocusSportsLabs\FslDataCenter\DataObjects\Country;
 use Throwable;
+use VelocitySportsLabs\DataCenter\DataObjects\Contracts\DataObjectContract;
+use VelocitySportsLabs\DataCenter\DataObjects\Country;
 
 class CountryRequest extends AbstractRequest
 {

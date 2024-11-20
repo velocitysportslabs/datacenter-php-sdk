@@ -1,6 +1,6 @@
 <?php
 
-namespace FocusSportsLabs\FslDataCenter\HttpClient;
+namespace VelocitySportsLabs\DataCenter\HttpClient;
 
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -45,7 +45,7 @@ class Options
     {
         $resolver->define('uri')
             ->required()
-            ->default('http://fsl-data-center.test') // TODO: change this url to use the production url by default
+            ->default('http://vsl-data-center.test') // TODO: change this url to use the production url by default
             ->allowedTypes('string')
             ->info('The base uri of the api');
 
@@ -62,6 +62,6 @@ class Options
         $resolver->define('auth_token')
             ->required()
             ->allowedTypes('string')
-            ->info('The api token from FSL');
+            ->info('The api token from VSL');
     }
 }

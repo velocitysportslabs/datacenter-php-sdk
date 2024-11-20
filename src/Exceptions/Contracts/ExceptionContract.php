@@ -1,6 +1,6 @@
 <?php
 
-namespace FocusSportsLabs\FslDataCenter\Exceptions\Contracts;
+namespace VelocitySportsLabs\DataCenter\Exceptions\Contracts;
 
 use Http\Client\Exception;
 

@@ -1,6 +1,6 @@
 <?php
 
-use FocusSportsLabs\FslDataCenter\Requests;
+use VelocitySportsLabs\DataCenter\Requests;
 
 dataset('apis', [
     ['associations', Requests\AssociationRequest::class],

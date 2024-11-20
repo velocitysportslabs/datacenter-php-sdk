@@ -1,8 +1,8 @@
 <?php
 
-namespace FocusSportsLabs\FslDataCenter\Requests;
+namespace VelocitySportsLabs\DataCenter\Requests;
 
-use FocusSportsLabs\FslDataCenter\DataObjects\Profile;
+use VelocitySportsLabs\DataCenter\DataObjects\Profile;
 
 class ProfileRequest extends AbstractRequest
 {

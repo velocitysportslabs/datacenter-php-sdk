@@ -1,6 +1,6 @@
 {
-    "name": "focus-sports-labs/fsl-data-center",
-    "description": "PHP SDK for Focus Sports Labs Data Center APIs",
+    "name": "velocity-sports-labs/datacenter-php-sdk",
+    "description": "PHP SDK for Velocity Sports Labs Data Center APIs",
     "type": "library",
     "authors": [
         {
@@ -9,9 +9,12 @@
         }
     ],
     "keywords": [
-        "fsl",
+        "vsl",
+        "velocity sports labs",
         "data center",
-        "apis"
+        "apis",
+        "php",
+        "sdk"
     ],
     "license": "MIT",
     "require": {
@@ -27,9 +30,9 @@
     "require-dev": {
         "laravel/pint": "^1.13",
         "nyholm/psr7": "^1.8",
-        "pestphp/pest": "^2.29",
+        "pestphp/pest": "^2.35",
         "php-http/mock-client": "^1.6",
-        "phpstan/phpstan": "^1.10",
+        "phpstan/phpstan": "^1.12",
         "symfony/http-client": "^6.4",
         "symfony/var-dumper": "^6.4",
         "thecodingmachine/phpstan-safe-rule": "^1.2"
@@ -45,12 +48,12 @@
     },
     "autoload": {
         "psr-4": {
-            "FocusSportsLabs\\FslDataCenter\\": "src/"
+            "VelocitySportsLabs\\DataCenter\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "FocusSportsLabs\\FslDataCenter\\Tests\\": "tests/"
+            "VelocitySportsLabs\\DataCenter\\Tests\\": "tests/"
         }
     },
     "scripts": {

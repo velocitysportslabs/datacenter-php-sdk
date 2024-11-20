@@ -1,9 +1,9 @@
 <?php
 
-namespace FocusSportsLabs\FslDataCenter\Requests;
+namespace VelocitySportsLabs\DataCenter\Requests;
 
-use FocusSportsLabs\FslDataCenter\DataObjects\Collection;
-use FocusSportsLabs\FslDataCenter\DataObjects\Division;
+use VelocitySportsLabs\DataCenter\DataObjects\Collection;
+use VelocitySportsLabs\DataCenter\DataObjects\Division;
 
 class DivisionRequest extends AbstractRequest
 {

@@ -1,5 +1,5 @@
 <?php
 
-namespace FocusSportsLabs\FslDataCenter\Requests\Contracts;
+namespace VelocitySportsLabs\DataCenter\Requests\Contracts;
 
 interface RequestContract {}

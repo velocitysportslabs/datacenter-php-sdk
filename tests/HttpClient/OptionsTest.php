@@ -1,8 +1,8 @@
 <?php
 
-use FocusSportsLabs\FslDataCenter\HttpClient\Options;
 use Symfony\Component\OptionsResolver\Exception\InvalidOptionsException;
 use Symfony\Component\OptionsResolver\Exception\UndefinedOptionsException;
+use VelocitySportsLabs\DataCenter\HttpClient\Options;
 
 it('can create an options object with default values', function (): void {
     $options = new Options([
@@ -13,7 +13,7 @@ it('can create an options object with default values', function (): void {
 
     expect($options)->toBeInstanceOf(Options::class);
     expect($options->getOptions())->toMatchArray([
-        'uri' => 'http://fsl-data-center.test', // TODO: change this url to use the production url by default
+        'uri' => 'http://vsl-data-center.test', // TODO: change this url to use the production url by default
         'user_agent' => 'My Custom SDK',
         'auth_token' => 'token',
         'origin' => 'origin',
@@ -61,7 +61,7 @@ it('can get the uri', function (): void {
 
     expect($options->getUri())
         ->toBeString()
-        ->toBe('http://fsl-data-center.test'); // TODO: change this url to use the production url by default
+        ->toBe('http://vsl-data-center.test'); // TODO: change this url to use the production url by default
 });
 
 it('can get the user agent', function (): void {

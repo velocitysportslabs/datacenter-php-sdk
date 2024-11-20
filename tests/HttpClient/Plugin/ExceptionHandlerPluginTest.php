@@ -1,20 +1,23 @@
 <?php
 
-use FocusSportsLabs\FslDataCenter\Exceptions\AuthorizationException;
-use FocusSportsLabs\FslDataCenter\Exceptions\BadRequestException;
-use FocusSportsLabs\FslDataCenter\Exceptions\Contracts\ExceptionContract;
-use FocusSportsLabs\FslDataCenter\Exceptions\ForbiddenException;
-use FocusSportsLabs\FslDataCenter\Exceptions\InternalServerErrorException;
-use FocusSportsLabs\FslDataCenter\Exceptions\RateLimitExceededException;
-use FocusSportsLabs\FslDataCenter\Exceptions\ResourceNotFoundException;
-use FocusSportsLabs\FslDataCenter\Exceptions\UnknownErrorException;
-use FocusSportsLabs\FslDataCenter\Exceptions\ValidationException;
-use FocusSportsLabs\FslDataCenter\HttpClient\Plugin\ExceptionHandlerPlugin;
 use Http\Client\Promise\HttpFulfilledPromise;
 use Http\Client\Promise\HttpRejectedPromise;
 use Nyholm\Psr7\Request;
 use Nyholm\Psr7\Response;
 use Psr\Http\Message\ResponseInterface;
+
+use function Safe\json_encode;
+
+use VelocitySportsLabs\DataCenter\Exceptions\AuthorizationException;
+use VelocitySportsLabs\DataCenter\Exceptions\BadRequestException;
+use VelocitySportsLabs\DataCenter\Exceptions\Contracts\ExceptionContract;
+use VelocitySportsLabs\DataCenter\Exceptions\ForbiddenException;
+use VelocitySportsLabs\DataCenter\Exceptions\InternalServerErrorException;
+use VelocitySportsLabs\DataCenter\Exceptions\RateLimitExceededException;
+use VelocitySportsLabs\DataCenter\Exceptions\ResourceNotFoundException;
+use VelocitySportsLabs\DataCenter\Exceptions\UnknownErrorException;
+use VelocitySportsLabs\DataCenter\Exceptions\ValidationException;
+use VelocitySportsLabs\DataCenter\HttpClient\Plugin\ExceptionHandlerPlugin;
 
 it('handles the appropriate response for status codes', function (ResponseInterface $response, ?ExceptionContract $exception = null): void {
     $request = new Request('GET', 'https://somewhere.com');
@@ -30,51 +33,54 @@ it('handles the appropriate response for status codes', function (ResponseInterf
     );
 
     if ($exception) {
-        expect($result)->toBeInstanceOf(HttpRejectedPromise::class);
-        expect(fn() => $result->wait())->toThrow($exception::class, $exception->getMessage());
+        expect($result)
+            ->toBeInstanceOf(HttpRejectedPromise::class)
+            ->and(fn() => $result->wait())
+            ->toThrow($exception::class, $exception->getMessage());
     } else {
-        expect($result)->toBeInstanceOf(HttpFulfilledPromise::class);
+        expect($result)
+            ->toBeInstanceOf(HttpFulfilledPromise::class);
         $result->wait();
     }
 })->with([
     '200 Response' => [
-        'response' => new Response(),
-        'exception' => null,
+        new Response(),
+        null,
     ],
     '400 Bad Request' => [
-        'response' => new Response(
+        new Response(
             400,
             ['Content-Type' => 'application/json'],
             json_encode(['message' => 'Bad data submitted']),
         ),
-        'exception' => new BadRequestException('Bad data submitted', 400),
+        new BadRequestException('Bad data submitted', 400),
     ],
     'Authorization' => [
-        'response' => new Response(
+        new Response(
             401,
             ['Content-Type' => 'application/json'],
             json_encode(['message' => 'Unauthenticated']),
         ),
-        'exception' => new AuthorizationException('Unauthenticated', 401),
+        new AuthorizationException('Unauthenticated', 401),
     ],
     'Forbidden' => [
-        'response' => new Response(
+        new Response(
             403,
             ['Content-Type' => 'application/json'],
             json_encode(['message' => 'Permission denied']),
         ),
-        'exception' => new ForbiddenException('Permission denied', 403),
+        new ForbiddenException('Permission denied', 403),
     ],
     'Not Found' => [
-        'response' => new Response(
+        new Response(
             404,
             ['Content-Type' => 'application/json'],
             json_encode(['message' => 'File not found.']),
         ),
-        'exception' => new ResourceNotFoundException('File not found.', 404),
+        new ResourceNotFoundException('File not found.', 404),
     ],
     '422 Unprocessable Entity' => [
-        'response' => new Response(
+        new Response(
             422,
             [
                 'Content-Type' => 'application/json',
@@ -88,12 +94,12 @@ it('handles the appropriate response for status codes', function (ResponseInterf
                 ],
             ),
         ),
-        'exception' => new ValidationException('Invalid data submitted', 422, [
+        new ValidationException('Invalid data submitted', 422, [
             'name' => ['Field is required'],
         ]),
     ],
     'Rate Limit Exceeded' => [
-        'response' => new Response(
+        new Response(
             429,
             [
                 'Content-Type' => 'application/json',
@@ -102,27 +108,27 @@ it('handles the appropriate response for status codes', function (ResponseInterf
             ],
             json_encode(['message' => 'Too many requests.']),
         ),
-        'exception' => new RateLimitExceededException('Too many requests.', 429, 5000, 0, 42),
+        new RateLimitExceededException('Too many requests.', 429, 5000, 0, 42),
     ],
     'Server error' => [
-        'response' => new Response(
+        new Response(
             500,
             [
                 'Content-Type' => 'application/json',
             ],
             json_encode(['message' => 'Something went wrong with executing your query']),
         ),
-        'exception' => new InternalServerErrorException('Something went wrong with executing your query', 500),
+        new InternalServerErrorException('Something went wrong with executing your query', 500),
     ],
 
     'Default Error Response' => [
-        'response' => new Response(
+        new Response(
             502,
             [
                 'Content-Type' => 'application/json',
             ],
             json_encode(['message' => 'Something went wrong with executing your query']),
         ),
-        'exception' => new UnknownErrorException('Something went wrong with executing your query', 502, ['message' => 'Something went wrong with executing your query']),
+        new UnknownErrorException('Something went wrong with executing your query', 502, ['message' => 'Something went wrong with executing your query']),
     ],
 ]);

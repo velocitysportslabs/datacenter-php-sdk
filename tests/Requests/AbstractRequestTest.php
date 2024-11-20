@@ -1,12 +1,12 @@
 <?php
 
-use FocusSportsLabs\FslDataCenter\Client;
-use FocusSportsLabs\FslDataCenter\HttpClient\Builder;
-use FocusSportsLabs\FslDataCenter\HttpClient\Options;
-use FocusSportsLabs\FslDataCenter\Requests\AbstractRequest;
 use Http\Client\Common\HttpMethodsClientInterface;
 use Nyholm\Psr7\Response;
 use PHPUnit\Framework\MockObject\MockObject;
+use VelocitySportsLabs\DataCenter\Client;
+use VelocitySportsLabs\DataCenter\HttpClient\Builder;
+use VelocitySportsLabs\DataCenter\HttpClient\Options;
+use VelocitySportsLabs\DataCenter\Requests\AbstractRequest;
 
 it('should pass get request to client', function (): void {
     $expectedArray = ['value'];

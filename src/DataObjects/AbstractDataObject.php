@@ -1,7 +1,7 @@
 <?php
 
-namespace FocusSportsLabs\FslDataCenter\DataObjects;
+namespace VelocitySportsLabs\DataCenter\DataObjects;
 
-use FocusSportsLabs\FslDataCenter\DataObjects\Contracts\DataObjectContract;
+use VelocitySportsLabs\DataCenter\DataObjects\Contracts\DataObjectContract;
 
 abstract class AbstractDataObject implements DataObjectContract {}
