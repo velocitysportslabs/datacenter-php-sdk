@@ -1,8 +1,8 @@
 <?php
 
-namespace FocusSportsLabs\FslDataCenter\Exceptions;
+namespace VelocitySportsLabs\DataCenter\Exceptions;
 
 use Exception;
-use FocusSportsLabs\FslDataCenter\Exceptions\Contracts\ExceptionContract;
+use VelocitySportsLabs\DataCenter\Exceptions\Contracts\ExceptionContract;
 
 final class InternalServerErrorException extends Exception implements ExceptionContract {}

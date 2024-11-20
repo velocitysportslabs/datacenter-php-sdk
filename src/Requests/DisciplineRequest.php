@@ -1,9 +1,9 @@
 <?php
 
-namespace FocusSportsLabs\FslDataCenter\Requests;
+namespace VelocitySportsLabs\DataCenter\Requests;
 
-use FocusSportsLabs\FslDataCenter\DataObjects\Collection;
-use FocusSportsLabs\FslDataCenter\DataObjects\Discipline;
+use VelocitySportsLabs\DataCenter\DataObjects\Collection;
+use VelocitySportsLabs\DataCenter\DataObjects\Discipline;
 
 class DisciplineRequest extends AbstractRequest
 {

@@ -1,8 +1,8 @@
 <?php
 
-use FocusSportsLabs\FslDataCenter\HttpClient\Builder;
 use Http\Client\Common\HttpMethodsClientInterface;
 use Http\Client\Common\Plugin\HeaderAppendPlugin;
+use VelocitySportsLabs\DataCenter\HttpClient\Builder;
 
 it('can create a builder instance', function (): void {
     $builder = new Builder();

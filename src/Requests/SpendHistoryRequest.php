@@ -1,8 +1,8 @@
 <?php
 
-namespace FocusSportsLabs\FslDataCenter\Requests;
+namespace VelocitySportsLabs\DataCenter\Requests;
 
-use FocusSportsLabs\FslDataCenter\DataObjects\SpendHistory;
+use VelocitySportsLabs\DataCenter\DataObjects\SpendHistory;
 
 class SpendHistoryRequest extends AbstractRequest
 {

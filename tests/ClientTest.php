@@ -1,10 +1,10 @@
 <?php
 
-use FocusSportsLabs\FslDataCenter\Client;
-use FocusSportsLabs\FslDataCenter\Exceptions\BadMethodCallException;
-use FocusSportsLabs\FslDataCenter\Exceptions\InvalidArgumentException;
-use FocusSportsLabs\FslDataCenter\HttpClient\Options;
 use Http\Client\Common\HttpMethodsClientInterface;
+use VelocitySportsLabs\DataCenter\Client;
+use VelocitySportsLabs\DataCenter\Exceptions\BadMethodCallException;
+use VelocitySportsLabs\DataCenter\Exceptions\InvalidArgumentException;
+use VelocitySportsLabs\DataCenter\HttpClient\Options;
 
 it('can create a new Client', function (): void {
     $client = new Client(

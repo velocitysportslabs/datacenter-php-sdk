@@ -1,13 +1,13 @@
 <?php
 
-namespace FocusSportsLabs\FslDataCenter\HttpClient\Plugin;
+namespace VelocitySportsLabs\DataCenter\HttpClient\Plugin;
 
-use FocusSportsLabs\FslDataCenter\Exceptions;
-use FocusSportsLabs\FslDataCenter\HttpClient\Message\ResponseMediator;
 use Http\Client\Common\Plugin;
 use Http\Promise\Promise;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
+use VelocitySportsLabs\DataCenter\Exceptions;
+use VelocitySportsLabs\DataCenter\HttpClient\Message\ResponseMediator;
 
 final class ExceptionHandlerPlugin implements Plugin
 {
@@ -16,7 +16,6 @@ final class ExceptionHandlerPlugin implements Plugin
      */
     public function handleRequest(RequestInterface $request, callable $next, callable $first): Promise
     {
-        // @phpstan-ignore-next-line
         return $next($request)->then(function (ResponseInterface $response) {
             $statusCode = $response->getStatusCode();
 

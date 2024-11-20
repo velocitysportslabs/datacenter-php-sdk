@@ -1,6 +1,6 @@
 <?php
 
-namespace FocusSportsLabs\FslDataCenter\DataObjects\Contracts;
+namespace VelocitySportsLabs\DataCenter\DataObjects\Contracts;
 
 interface DataObjectContract
 {

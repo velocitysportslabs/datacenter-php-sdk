@@ -1,17 +1,17 @@
 <?php
 
-namespace FocusSportsLabs\FslDataCenter;
+namespace VelocitySportsLabs\DataCenter;
 
-use FocusSportsLabs\FslDataCenter\Exceptions\BadMethodCallException;
-use FocusSportsLabs\FslDataCenter\Exceptions\InvalidArgumentException;
-use FocusSportsLabs\FslDataCenter\HttpClient\Builder;
-use FocusSportsLabs\FslDataCenter\HttpClient\Options;
-use FocusSportsLabs\FslDataCenter\HttpClient\Plugin\ExceptionHandlerPlugin;
-use FocusSportsLabs\FslDataCenter\Requests\Contracts\RequestContract;
 use Http\Client\Common\HttpMethodsClientInterface;
 use Http\Client\Common\Plugin\BaseUriPlugin;
 use Http\Client\Common\Plugin\HeaderDefaultsPlugin;
 use Http\Discovery\Psr17FactoryDiscovery;
+use VelocitySportsLabs\DataCenter\Exceptions\BadMethodCallException;
+use VelocitySportsLabs\DataCenter\Exceptions\InvalidArgumentException;
+use VelocitySportsLabs\DataCenter\HttpClient\Builder;
+use VelocitySportsLabs\DataCenter\HttpClient\Options;
+use VelocitySportsLabs\DataCenter\HttpClient\Plugin\ExceptionHandlerPlugin;
+use VelocitySportsLabs\DataCenter\Requests\Contracts\RequestContract;
 
 /**
  * @method Requests\AssociationRequest associations()
@@ -47,8 +47,8 @@ class Client
 
         $version = null;
 
-        if (\Composer\InstalledVersions::isInstalled('focus-sports-labs/fsl-data-center')) {
-            $version = \Composer\InstalledVersions::getPrettyVersion('focus-sports-labs/fsl-data-center');
+        if (\Composer\InstalledVersions::isInstalled('velocity-sports-labs/datacenter-php-sdk')) {
+            $version = \Composer\InstalledVersions::getPrettyVersion('velocity-sports-labs/datacenter-php-sdk');
         }
 
         $this->httpClient->addPlugin(
@@ -65,8 +65,8 @@ class Client
     }
 
     /**
-     * @param string $name
-     * @param array  $args
+     * @param  string  $name
+     * @param  array  $args
      */
     public function __call($name, $args): RequestContract
     {

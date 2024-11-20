@@ -1,10 +1,10 @@
 <?php
 
-namespace FocusSportsLabs\FslDataCenter\Requests;
+namespace VelocitySportsLabs\DataCenter\Requests;
 
-use FocusSportsLabs\FslDataCenter\DataObjects\Association;
-use FocusSportsLabs\FslDataCenter\DataObjects\Club;
-use FocusSportsLabs\FslDataCenter\DataObjects\Collection;
+use VelocitySportsLabs\DataCenter\DataObjects\Association;
+use VelocitySportsLabs\DataCenter\DataObjects\Club;
+use VelocitySportsLabs\DataCenter\DataObjects\Collection;
 
 class AssociationRequest extends AbstractRequest
 {

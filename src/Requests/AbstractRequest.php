@@ -1,13 +1,14 @@
 <?php
 
-namespace FocusSportsLabs\FslDataCenter\Requests;
+namespace VelocitySportsLabs\DataCenter\Requests;
 
-use FocusSportsLabs\FslDataCenter\Client;
-use FocusSportsLabs\FslDataCenter\HttpClient\Message\ResponseMediator;
-use FocusSportsLabs\FslDataCenter\Requests\Contracts\RequestContract;
 use Psr\Http\Message\ResponseInterface;
 
 use function Safe\json_encode;
+
+use VelocitySportsLabs\DataCenter\Client;
+use VelocitySportsLabs\DataCenter\HttpClient\Message\ResponseMediator;
+use VelocitySportsLabs\DataCenter\Requests\Contracts\RequestContract;
 
 abstract class AbstractRequest implements RequestContract
 {

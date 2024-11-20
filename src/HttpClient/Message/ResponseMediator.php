@@ -1,6 +1,6 @@
 <?php
 
-namespace FocusSportsLabs\FslDataCenter\HttpClient\Message;
+namespace VelocitySportsLabs\DataCenter\HttpClient\Message;
 
 use JsonException;
 use Psr\Http\Message\ResponseInterface;

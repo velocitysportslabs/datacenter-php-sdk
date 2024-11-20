@@ -1,8 +1,8 @@
 <?php
 
-namespace FocusSportsLabs\FslDataCenter\Requests;
+namespace VelocitySportsLabs\DataCenter\Requests;
 
-use FocusSportsLabs\FslDataCenter\DataObjects\Fan;
+use VelocitySportsLabs\DataCenter\DataObjects\Fan;
 
 class FanRequest extends AbstractRequest
 {

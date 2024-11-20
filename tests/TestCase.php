@@ -1,12 +1,12 @@
 <?php
 
-namespace FocusSportsLabs\FslDataCenter\Tests;
+namespace VelocitySportsLabs\DataCenter\Tests;
 
-use FocusSportsLabs\FslDataCenter\Client;
-use FocusSportsLabs\FslDataCenter\HttpClient\Builder;
-use FocusSportsLabs\FslDataCenter\HttpClient\Options;
 use Http\Mock\Client as MockClient;
 use PHPUnit\Framework\TestCase as BaseTestCase;
+use VelocitySportsLabs\DataCenter\Client;
+use VelocitySportsLabs\DataCenter\HttpClient\Builder;
+use VelocitySportsLabs\DataCenter\HttpClient\Options;
 
 abstract class TestCase extends BaseTestCase
 {
