@@ -45,7 +45,7 @@ class Options
     {
         $resolver->define('uri')
             ->required()
-            ->default('http://vsl-data-center.test') // TODO: change this url to use the production url by default
+            ->default('https://api.velocitysportslabs.com')
             ->allowedTypes('string')
             ->info('The base uri of the api');
 
