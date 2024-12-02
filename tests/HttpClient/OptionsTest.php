@@ -13,7 +13,7 @@ it('can create an options object with default values', function (): void {
 
     expect($options)->toBeInstanceOf(Options::class);
     expect($options->getOptions())->toMatchArray([
-        'uri' => 'http://vsl-data-center.test', // TODO: change this url to use the production url by default
+        'uri' => 'https://api.velocitysportslabs.com', // TODO: change this url to use the production url by default
         'user_agent' => 'My Custom SDK',
         'auth_token' => 'token',
         'origin' => 'origin',
@@ -61,7 +61,7 @@ it('can get the uri', function (): void {
 
     expect($options->getUri())
         ->toBeString()
-        ->toBe('http://vsl-data-center.test'); // TODO: change this url to use the production url by default
+        ->toBe('https://api.velocitysportslabs.com'); // TODO: change this url to use the production url by default
 });
 
 it('can get the user agent', function (): void {
