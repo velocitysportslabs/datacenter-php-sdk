@@ -1,5 +1,15 @@
 # ChangeLog
 
+## v1.0.0 - 2024-12-02
+
+### What's Changed
+
+* Bump laravel/pint from 1.18.1 to 1.18.2 by @dependabot in https://github.com/velocitysportslabs/datacenter-php-sdk/pull/93
+* Bump laravel/pint from 1.18.2 to 1.18.3 by @dependabot in https://github.com/velocitysportslabs/datacenter-php-sdk/pull/94
+* use live production url in package by @alhaji-aki in https://github.com/velocitysportslabs/datacenter-php-sdk/pull/95
+
+**Full Changelog**: https://github.com/velocitysportslabs/datacenter-php-sdk/compare/v0.1.0...v1.0.0
+
 ## v0.1.0 - 2024-11-20
 
 ### What's Changed
