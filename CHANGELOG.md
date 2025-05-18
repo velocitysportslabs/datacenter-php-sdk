@@ -1,5 +1,17 @@
 # ChangeLog
 
+## v1.1.0 - 2025-05-18
+
+### What's Changed
+
+* Bump laravel/pint from 1.18.3 to 1.19.0 by @dependabot in https://github.com/velocitysportslabs/datacenter-php-sdk/pull/96
+* Bump laravel/pint from 1.19.0 to 1.20.0 by @dependabot in https://github.com/velocitysportslabs/datacenter-php-sdk/pull/97
+* Bump dependabot/fetch-metadata from 2.2.0 to 2.3.0 by @dependabot in https://github.com/velocitysportslabs/datacenter-php-sdk/pull/98
+* Bump dependabot/fetch-metadata from 2.3.0 to 2.4.0 by @dependabot in https://github.com/velocitysportslabs/datacenter-php-sdk/pull/99
+* added PHP8.4 support by @alhaji-aki in https://github.com/velocitysportslabs/datacenter-php-sdk/pull/101
+
+**Full Changelog**: https://github.com/velocitysportslabs/datacenter-php-sdk/compare/v1.0.0...v1.1.0
+
 ## v1.0.0 - 2024-12-02
 
 ### What's Changed
