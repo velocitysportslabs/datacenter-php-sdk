@@ -1,5 +1,13 @@
 # ChangeLog
 
+## v1.2.0 - 2025-07-06
+
+### What's Changed
+
+* Added Organization Request apis
+
+**Full Changelog**: https://github.com/velocitysportslabs/datacenter-php-sdk/compare/v1.1.0...v1.2.0
+
 ## v1.1.1 - 2025-05-25
 
 ### What's Changed
