@@ -1,5 +1,13 @@
 # ChangeLog
 
+## v1.1.1 - 2025-05-25
+
+### What's Changed
+
+* Added organization types to organization data object by @alhaji-aki in https://github.com/velocitysportslabs/datacenter-php-sdk/pull/102
+
+**Full Changelog**: https://github.com/velocitysportslabs/datacenter-php-sdk/compare/v1.1.0...v1.1.1
+
 ## v1.1.0 - 2025-05-18
 
 ### What's Changed
