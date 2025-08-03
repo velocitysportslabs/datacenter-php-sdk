@@ -1,5 +1,14 @@
 # ChangeLog
 
+## v1.2.1 - 2025-08-03
+
+### What's Changed
+
+* Bump stefanzweifel/git-auto-commit-action from 5 to 6 by @dependabot[bot] in https://github.com/velocitysportslabs/datacenter-php-sdk/pull/103
+* add support for parent associations relationship for Association by @alhaji-aki in https://github.com/velocitysportslabs/datacenter-php-sdk/pull/104
+
+**Full Changelog**: https://github.com/velocitysportslabs/datacenter-php-sdk/compare/v1.2.0...v1.2.1
+
 ## v1.2.0 - 2025-07-06
 
 ### What's Changed
