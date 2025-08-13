@@ -15,6 +15,7 @@ use VelocitySportsLabs\DataCenter\Requests\Contracts\RequestContract;
 
 /**
  * @method Requests\AssociationRequest associations()
+ * @method Requests\AthleteRequest athletes()
  * @method Requests\ClubRequest clubs()
  * @method Requests\CountryRequest countries()
  * @method Requests\CurrencyRequest currencies()
@@ -23,7 +24,6 @@ use VelocitySportsLabs\DataCenter\Requests\Contracts\RequestContract;
  * @method Requests\FanRequest fans()
  * @method Requests\OrganizationRequest organizations()
  * @method Requests\OrganizationRequestRequest organizationRequests()
- * @method Requests\PlayerRequest players()
  * @method Requests\ProfileRequest profiles()
  * @method Requests\SpendHistoryRequest spendHistory()
  * @method Requests\TeamRequest teams()
@@ -90,6 +90,7 @@ class Client
     {
         return match ($name) {
             'associations' => new Requests\AssociationRequest($this),
+            'athletes' => new Requests\AthleteRequest($this),
             'clubs' => new Requests\ClubRequest($this),
             'countries' => new Requests\CountryRequest($this),
             'currencies' => new Requests\CurrencyRequest($this),
@@ -98,7 +99,6 @@ class Client
             'fans' => new Requests\FanRequest($this),
             'organizations' => new Requests\OrganizationRequest($this),
             'organizationRequests' => new Requests\OrganizationRequestRequest($this),
-            'players' => new Requests\PlayerRequest($this),
             'profiles' => new Requests\ProfileRequest($this),
             'spendHistories' => new Requests\SpendHistoryRequest($this),
             'teams' => new Requests\TeamRequest($this),
