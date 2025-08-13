@@ -2,8 +2,8 @@
 
 namespace VelocitySportsLabs\DataCenter\Requests;
 
+use VelocitySportsLabs\DataCenter\DataObjects\Athlete;
 use VelocitySportsLabs\DataCenter\DataObjects\Collection;
-use VelocitySportsLabs\DataCenter\DataObjects\Player;
 use VelocitySportsLabs\DataCenter\DataObjects\Team;
 
 class TeamRequest extends AbstractRequest
@@ -24,11 +24,11 @@ class TeamRequest extends AbstractRequest
         return Team::fromArray($data);
     }
 
-    public function retrievePlayers(string $team, array $params = []): Collection
+    public function retrieveAthletes(string $team, array $params = []): Collection
     {
         return new Collection(
-            $this->get("v1/teams/{$team}/players", $params),
-            Player::class,
+            $this->get("v1/teams/{$team}/athletes", $params),
+            Athlete::class,
         );
     }
 }

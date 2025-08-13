@@ -4,7 +4,7 @@ namespace VelocitySportsLabs\DataCenter\DataObjects;
 
 use Safe\DateTime;
 
-class Player extends AbstractDataObject
+class Athlete extends AbstractDataObject
 {
     public function __construct(
         public readonly string $uuid,
@@ -16,7 +16,7 @@ class Player extends AbstractDataObject
         public readonly array $age,
         public readonly float $height,
         public readonly float $weight,
-        public readonly string $preferredFoot,
+        public readonly string $dominantSide,
         public readonly ?string $bio,
         public readonly ?DateTime $startAt,
         public readonly ?DateTime $endAt,
@@ -42,7 +42,7 @@ class Player extends AbstractDataObject
             age: $data['age'],
             height: $data['height'],
             weight: $data['weight'],
-            preferredFoot: $data['preferred_foot'],
+            dominantSide: $data['dominant_side'],
             bio: $data['bio'] ?? null,
             startAt: array_key_exists('start_at', $data) && null !== $data['start_at'] ? DateTime::createFromFormat('Y-m-d H:i:s', $data['start_at']) : null,
             endAt: array_key_exists('end_at', $data) && null !== $data['end_at'] ? DateTime::createFromFormat('Y-m-d H:i:s', $data['end_at']) : null,
@@ -69,7 +69,7 @@ class Player extends AbstractDataObject
             'age' => $this->age,
             'height' => $this->height,
             'weight' => $this->weight,
-            'preferred_foot' => $this->preferredFoot,
+            'dominant_side' => $this->dominantSide,
             'bio' => $this->bio,
             'start_at' => $this->startAt,
             'end_at' => $this->endAt,
