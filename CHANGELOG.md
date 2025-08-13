@@ -1,5 +1,13 @@
 # ChangeLog
 
+## v1.3.0 - 2025-08-13
+
+### What's Changed
+
+* refactor players to athletes by @alhaji-aki in https://github.com/velocitysportslabs/datacenter-php-sdk/pull/105
+
+**Full Changelog**: https://github.com/velocitysportslabs/datacenter-php-sdk/compare/v1.2.1...v1.3.0
+
 ## v1.2.1 - 2025-08-03
 
 ### What's Changed
