@@ -1,5 +1,14 @@
 # ChangeLog
 
+## v1.3.1 - 2025-10-09
+
+### What's Changed
+
+* Bump actions/checkout from 4 to 5 by @dependabot[bot] in https://github.com/velocitysportslabs/datacenter-php-sdk/pull/106
+* Fixed spend history Api instance error by @alhaji-aki in https://github.com/velocitysportslabs/datacenter-php-sdk/pull/107
+
+**Full Changelog**: https://github.com/velocitysportslabs/datacenter-php-sdk/compare/v1.3.0...v1.3.1
+
 ## v1.3.0 - 2025-08-13
 
 ### What's Changed
