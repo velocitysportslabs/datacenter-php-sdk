@@ -14,6 +14,6 @@ dataset('apis', [
     ['organizations', Requests\OrganizationRequest::class],
     ['organizationRequests', Requests\OrganizationRequestRequest::class],
     ['profiles', Requests\ProfileRequest::class],
-    ['spendHistories', Requests\SpendHistoryRequest::class],
+    ['spendHistory', Requests\SpendHistoryRequest::class],
     ['teams', Requests\TeamRequest::class],
 ]);

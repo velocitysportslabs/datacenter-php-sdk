@@ -100,7 +100,7 @@ class Client
             'organizations' => new Requests\OrganizationRequest($this),
             'organizationRequests' => new Requests\OrganizationRequestRequest($this),
             'profiles' => new Requests\ProfileRequest($this),
-            'spendHistories' => new Requests\SpendHistoryRequest($this),
+            'spendHistory' => new Requests\SpendHistoryRequest($this),
             'teams' => new Requests\TeamRequest($this),
             default => throw new InvalidArgumentException(sprintf('Undefined api instance called: "%s"', $name)),
         };
