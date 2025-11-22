@@ -1,5 +1,14 @@
 # ChangeLog
 
+## v1.4.0 - 2025-11-22
+
+### What's Changed
+
+* Bump stefanzweifel/git-auto-commit-action from 6 to 7 by @dependabot[bot] in https://github.com/velocitysportslabs/datacenter-php-sdk/pull/108
+* add media organization support by @alhaji-aki in https://github.com/velocitysportslabs/datacenter-php-sdk/pull/109
+
+**Full Changelog**: https://github.com/velocitysportslabs/datacenter-php-sdk/compare/v1.3.1...v1.4.0
+
 ## v1.3.1 - 2025-10-09
 
 ### What's Changed
