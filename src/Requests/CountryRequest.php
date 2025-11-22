@@ -8,13 +8,12 @@ use VelocitySportsLabs\DataCenter\DataObjects\Country;
 
 class CountryRequest extends AbstractRequest
 {
+    /**
+     * @throws Throwable
+     */
     public function list(array $params = []): array
     {
-        try {
-            $data = $this->get('v1/countries', $params);
-        } catch (Throwable $th) {
-            throw $th;
-        }
+        $data = $this->get('v1/countries', $params);
 
         return array_map(
             callback: fn(array $item): DataObjectContract => Country::fromArray($item),

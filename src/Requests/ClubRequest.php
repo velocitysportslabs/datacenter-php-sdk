@@ -19,7 +19,7 @@ class ClubRequest extends AbstractRequest
 
     public function retrieve(string $club, array $params = []): Club
     {
-        /** @var array */
+        /** @var array $data */
         $data = $this->get("v1/clubs/{$club}", $params)['data'];
 
         return Club::fromArray($data);
