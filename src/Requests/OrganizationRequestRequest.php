@@ -8,7 +8,7 @@ class OrganizationRequestRequest extends AbstractRequest
 {
     public function create(array $data = []): OrganizationRequest
     {
-        /** @var array */
+        /** @var array $data */
         $data = $this->post('v1/organization-requests', $data)['data'];
 
         return OrganizationRequest::fromArray($data);

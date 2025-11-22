@@ -18,7 +18,7 @@ class TeamRequest extends AbstractRequest
 
     public function retrieve(string $team, array $params = []): Team
     {
-        /** @var array */
+        /** @var array $data */
         $data = $this->get("v1/teams/{$team}", $params)['data'];
 
         return Team::fromArray($data);

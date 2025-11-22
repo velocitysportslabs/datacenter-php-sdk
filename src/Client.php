@@ -22,6 +22,7 @@ use VelocitySportsLabs\DataCenter\Requests\Contracts\RequestContract;
  * @method Requests\DisciplineRequest disciplines()
  * @method Requests\DivisionRequest divisions()
  * @method Requests\FanRequest fans()
+ * @method Requests\MediaOrganizationRequest mediaOrganizations()
  * @method Requests\OrganizationRequest organizations()
  * @method Requests\OrganizationRequestRequest organizationRequests()
  * @method Requests\ProfileRequest profiles()
@@ -97,6 +98,7 @@ class Client
             'disciplines' => new Requests\DisciplineRequest($this),
             'divisions' => new Requests\DivisionRequest($this),
             'fans' => new Requests\FanRequest($this),
+            'mediaOrganizations' => new Requests\MediaOrganizationRequest($this),
             'organizations' => new Requests\OrganizationRequest($this),
             'organizationRequests' => new Requests\OrganizationRequestRequest($this),
             'profiles' => new Requests\ProfileRequest($this),

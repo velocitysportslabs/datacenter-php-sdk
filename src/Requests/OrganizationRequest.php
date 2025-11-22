@@ -18,7 +18,7 @@ class OrganizationRequest extends AbstractRequest
 
     public function retrieve(string $organization, array $params = []): Organization
     {
-        /** @var array */
+        /** @var array $data */
         $data = $this->get("v1/organizations/{$organization}", $params)['data'];
 
         return Organization::fromArray($data);

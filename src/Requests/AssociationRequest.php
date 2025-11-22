@@ -18,7 +18,7 @@ class AssociationRequest extends AbstractRequest
 
     public function retrieve(string $association, array $params = []): Association
     {
-        /** @var array */
+        /** @var array $data */
         $data = $this->get("v1/associations/{$association}", $params)['data'];
 
         return Association::fromArray($data);

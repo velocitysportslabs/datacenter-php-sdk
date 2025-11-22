@@ -12,13 +12,14 @@ class OrganizationRequest extends AbstractDataObject
         public readonly string $organizationName,
         public readonly ?string $modelType,
         public readonly ?string $type,
-        public readonly string $location,
+        public readonly ?string $location,
         public readonly string $name,
         public readonly string $email,
         public readonly string $phone,
         public readonly ?string $status,
         public readonly ?array $reasons,
         public readonly DateTime $createdAt,
+        public readonly ?Country $country = null,
         public readonly Club|Organization|Association|null $model = null,
     ) {}
 
@@ -46,6 +47,7 @@ class OrganizationRequest extends AbstractDataObject
             status: $data['status'] ?? null,
             reasons: $data['reasons'] ?? null,
             createdAt: DateTime::createFromFormat('Y-m-d\TH:i:s.u\Z', $data['created_at']),
+            country: array_key_exists('country', $data) && ! empty($data['country']) ? Country::fromArray($data['country']) : null,
             model: $model,
         );
     }
@@ -64,6 +66,7 @@ class OrganizationRequest extends AbstractDataObject
             'status' => $this->status,
             'reasons' => $this->reasons,
             'created_at' => $this->createdAt,
+            'country' => $this->country?->toArray(),
             'model' => $this->model?->toArray(),
         ];
     }

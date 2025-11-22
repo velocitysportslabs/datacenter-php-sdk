@@ -19,7 +19,7 @@ class AthleteRequest extends AbstractRequest
 
     public function retrieve(string $athlete, array $params = []): Athlete
     {
-        /** @var array */
+        /** @var array $data */
         $data = $this->get("v1/athletes/{$athlete}", $params)['data'];
 
         return Athlete::fromArray($data);
