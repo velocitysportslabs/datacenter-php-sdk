@@ -19,6 +19,8 @@ jobs:
             pest: 2.*
           - php: 8.1
             pest: 3.*
+          - php: 8.1
+            pest: 2.*
 
     name: PHP${{ matrix.php }} - ${{ matrix.os }}
 

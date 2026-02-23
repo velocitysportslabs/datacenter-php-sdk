@@ -20,7 +20,7 @@ class OrganizationRequest extends AbstractDataObject
         public readonly ?array $reasons,
         public readonly DateTime $createdAt,
         public readonly ?Country $country = null,
-        public readonly Club|Organization|Association|null $model = null,
+        public readonly Club|Organization|Association|MediaOrganization|null $model = null,
     ) {}
 
     public static function fromArray(array $data): self
@@ -31,6 +31,7 @@ class OrganizationRequest extends AbstractDataObject
                 'association' => Association::fromArray($data['model']),
                 'club' => Club::fromArray($data['model']),
                 'organization' => Organization::fromArray($data['model']),
+                'media_organization' => MediaOrganization::fromArray($data['model']),
                 default => throw new Exception('Invalid model type'),
             };
         }
