@@ -31,6 +31,7 @@ class OrganizationRequest extends AbstractDataObject
                 'association' => Association::fromArray($data['model']),
                 'club' => Club::fromArray($data['model']),
                 'organization' => Organization::fromArray($data['model']),
+                'media_organization' => MediaOrganization::fromArray($data['model']),
                 default => throw new Exception('Invalid model type'),
             };
         }
