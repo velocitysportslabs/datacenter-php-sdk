@@ -1,5 +1,15 @@
 # ChangeLog
 
+## v1.4.2 - 2026-02-23
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 2.4.0 to 2.5.0 by @dependabot[bot] in https://github.com/velocitysportslabs/datacenter-php-sdk/pull/111
+* Bump actions/checkout from 5 to 6 by @dependabot[bot] in https://github.com/velocitysportslabs/datacenter-php-sdk/pull/110
+* fix media organization issues by @alhaji-aki in https://github.com/velocitysportslabs/datacenter-php-sdk/pull/112
+
+**Full Changelog**: https://github.com/velocitysportslabs/datacenter-php-sdk/compare/v1.4.1...v1.4.2
+
 ## v1.4.1 - 2025-11-22
 
 **Full Changelog**: https://github.com/velocitysportslabs/datacenter-php-sdk/compare/v1.4.0...v1.4.1
