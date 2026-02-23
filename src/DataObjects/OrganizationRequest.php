@@ -20,7 +20,7 @@ class OrganizationRequest extends AbstractDataObject
         public readonly ?array $reasons,
         public readonly DateTime $createdAt,
         public readonly ?Country $country = null,
-        public readonly Club|Organization|Association|null $model = null,
+        public readonly Club|Organization|Association|MediaOrganization|null $model = null,
     ) {}
 
     public static function fromArray(array $data): self
