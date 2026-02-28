@@ -25,7 +25,7 @@
         "psr/http-client": "^1.0",
         "psr/http-factory": "^1.0",
         "symfony/options-resolver": "^6.4",
-        "thecodingmachine/safe": "^2.5"
+        "thecodingmachine/safe": "^2.5|^3.4"
     },
     "require-dev": {
         "laravel/pint": "^1.13",
