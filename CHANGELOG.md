@@ -1,5 +1,9 @@
 # ChangeLog
 
+## v1.4.3 - 2026-02-28
+
+**Full Changelog**: https://github.com/velocitysportslabs/datacenter-php-sdk/compare/v1.4.2...v1.4.3
+
 ## v1.4.2 - 2026-02-23
 
 ### What's Changed
