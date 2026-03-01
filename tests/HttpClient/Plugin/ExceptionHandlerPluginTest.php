@@ -28,14 +28,14 @@ it('handles the appropriate response for status codes', function (ResponseInterf
 
     $result = $plugin->handleRequest(
         $request,
-        fn () => $promise,
-        fn () => $promise,
+        fn() => $promise,
+        fn() => $promise,
     );
 
     if ($exception) {
         expect($result)
             ->toBeInstanceOf(HttpRejectedPromise::class)
-            ->and(fn () => $result->wait())
+            ->and(fn() => $result->wait())
             ->toThrow($exception::class, $exception->getMessage());
     } else {
         expect($result)
