@@ -16,7 +16,7 @@ class CountryRequest extends AbstractRequest
         $data = $this->get('v1/countries', $params);
 
         return array_map(
-            callback: fn (array $item): DataObjectContract => Country::fromArray($item),
+            callback: fn(array $item): DataObjectContract => Country::fromArray($item),
             array: $data['data'],
         );
     }
