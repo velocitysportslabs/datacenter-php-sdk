@@ -2,10 +2,14 @@
 
 namespace VelocitySportsLabs\DataCenter\Requests;
 
+use Exception;
 use VelocitySportsLabs\DataCenter\DataObjects\OrganizationRequest;
 
 class OrganizationRequestRequest extends AbstractRequest
 {
+    /**
+     * @throws Exception
+     */
     public function create(array $data = []): OrganizationRequest
     {
         /** @var array $data */

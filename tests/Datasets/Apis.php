@@ -11,6 +11,8 @@ dataset('apis', [
     ['disciplines', Requests\DisciplineRequest::class],
     ['divisions', Requests\DivisionRequest::class],
     ['fans', Requests\FanRequest::class],
+    ['mediaOrganizations', Requests\MediaOrganizationRequest::class],
+    ['organizationClaims', Requests\OrganizationClaimRequest::class],
     ['organizations', Requests\OrganizationRequest::class],
     ['organizationRequests', Requests\OrganizationRequestRequest::class],
     ['profiles', Requests\ProfileRequest::class],
