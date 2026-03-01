@@ -11,13 +11,13 @@ it('can create an options object with default values', function (): void {
         'origin' => 'origin',
     ]);
 
-    expect($options)->toBeInstanceOf(Options::class);
-    expect($options->getOptions())->toMatchArray([
-        'uri' => 'https://api.velocitysportslabs.com', // TODO: change this url to use the production url by default
-        'user_agent' => 'My Custom SDK',
-        'auth_token' => 'token',
-        'origin' => 'origin',
-    ]);
+    expect($options)->toBeInstanceOf(Options::class)
+        ->and($options->getOptions())->toMatchArray([
+            'uri' => 'https://api.velocitysportslabs.com',
+            'user_agent' => 'My Custom SDK',
+            'auth_token' => 'token',
+            'origin' => 'origin',
+        ]);
 });
 
 it('sets the options to the value passed when instantiating options object', function (): void {
@@ -28,13 +28,13 @@ it('sets the options to the value passed when instantiating options object', fun
         'origin' => 'origin',
     ]);
 
-    expect($options)->toBeInstanceOf(Options::class);
-    expect($options->getOptions())->toMatchArray([
-        'uri' => 'https://somewhere.com',
-        'user_agent' => 'Testing Agent',
-        'auth_token' => 'token',
-        'origin' => 'origin',
-    ]);
+    expect($options)->toBeInstanceOf(Options::class)
+        ->and($options->getOptions())->toMatchArray([
+            'uri' => 'https://somewhere.com',
+            'user_agent' => 'Testing Agent',
+            'auth_token' => 'token',
+            'origin' => 'origin',
+        ]);
 });
 
 it('fails if an invalid option is passed', function (): void {

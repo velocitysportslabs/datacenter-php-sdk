@@ -2,6 +2,7 @@
 
 namespace VelocitySportsLabs\DataCenter;
 
+use Composer\InstalledVersions;
 use Http\Client\Common\HttpMethodsClientInterface;
 use Http\Client\Common\Plugin\BaseUriPlugin;
 use Http\Client\Common\Plugin\HeaderDefaultsPlugin;
@@ -24,6 +25,7 @@ use VelocitySportsLabs\DataCenter\Requests\Contracts\RequestContract;
  * @method Requests\FanRequest fans()
  * @method Requests\MediaOrganizationRequest mediaOrganizations()
  * @method Requests\OrganizationRequest organizations()
+ * @method Requests\OrganizationClaimRequest organizationClaims()
  * @method Requests\OrganizationRequestRequest organizationRequests()
  * @method Requests\ProfileRequest profiles()
  * @method Requests\SpendHistoryRequest spendHistory()
@@ -49,8 +51,8 @@ class Client
 
         $version = null;
 
-        if (\Composer\InstalledVersions::isInstalled('velocity-sports-labs/datacenter-php-sdk')) {
-            $version = \Composer\InstalledVersions::getPrettyVersion('velocity-sports-labs/datacenter-php-sdk');
+        if (InstalledVersions::isInstalled('velocity-sports-labs/datacenter-php-sdk')) {
+            $version = InstalledVersions::getPrettyVersion('velocity-sports-labs/datacenter-php-sdk');
         }
 
         $this->httpClient->addPlugin(
@@ -100,6 +102,7 @@ class Client
             'fans' => new Requests\FanRequest($this),
             'mediaOrganizations' => new Requests\MediaOrganizationRequest($this),
             'organizations' => new Requests\OrganizationRequest($this),
+            'organizationClaims' => new Requests\OrganizationClaimRequest($this),
             'organizationRequests' => new Requests\OrganizationRequestRequest($this),
             'profiles' => new Requests\ProfileRequest($this),
             'spendHistory' => new Requests\SpendHistoryRequest($this),
