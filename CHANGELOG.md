@@ -1,5 +1,13 @@
 # ChangeLog
 
+## v1.5.0 - 2026-03-01
+
+### What's Changed
+
+* add support for organization claims and drop PHP 8.1 support by @alhaji-aki in https://github.com/velocitysportslabs/datacenter-php-sdk/pull/113
+
+**Full Changelog**: https://github.com/velocitysportslabs/datacenter-php-sdk/compare/v1.4.3...v1.5.0
+
 ## v1.4.3 - 2026-02-28
 
 **Full Changelog**: https://github.com/velocitysportslabs/datacenter-php-sdk/compare/v1.4.2...v1.4.3
