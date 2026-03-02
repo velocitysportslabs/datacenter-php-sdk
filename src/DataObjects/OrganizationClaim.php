@@ -42,7 +42,7 @@ class OrganizationClaim extends AbstractDataObject
             email: $data['email'],
             phone: $data['phone'] ?? null,
             status: $data['status'] ?? null,
-            reasons: $data['reasons'] ?? null,
+            reasons: (array) $data['reasons'],
             createdAt: DateTime::createFromFormat('Y-m-d\TH:i:s.u\Z', $data['created_at']),
             model: $model,
         );

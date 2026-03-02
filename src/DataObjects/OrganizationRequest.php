@@ -49,7 +49,7 @@ class OrganizationRequest extends AbstractDataObject
             email: $data['email'],
             phone: $data['phone'] ?? null,
             status: $data['status'] ?? null,
-            reasons: $data['reasons'] ?? null,
+            reasons: (array) $data['reasons'],
             createdAt: DateTime::createFromFormat('Y-m-d\TH:i:s.u\Z', $data['created_at']),
             country: array_key_exists('country', $data) && ! empty($data['country']) ? Country::fromArray($data['country']) : null,
             model: $model,
