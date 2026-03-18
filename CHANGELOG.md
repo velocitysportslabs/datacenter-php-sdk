@@ -1,5 +1,13 @@
 # ChangeLog
 
+## v1.5.3 - 2026-03-18
+
+### What's Changed
+
+* add media organization as spend history models by @alhaji-aki in https://github.com/velocitysportslabs/datacenter-php-sdk/pull/116
+
+**Full Changelog**: https://github.com/velocitysportslabs/datacenter-php-sdk/compare/v1.5.2...v1.5.3
+
 ## v1.5.2 - 2026-03-18
 
 ### What's Changed
