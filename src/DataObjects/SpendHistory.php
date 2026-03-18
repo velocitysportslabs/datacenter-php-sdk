@@ -16,7 +16,7 @@ class SpendHistory extends AbstractDataObject
         public readonly DateTime $purchasedAt,
         public readonly DateTime $createdAt,
         public readonly ?Profile $profile = null,
-        public readonly Club|Organization|null $model = null,
+        public readonly Club|Organization|MediaOrganization|null $model = null,
     ) {}
 
     public static function fromArray(array $data): self
@@ -26,6 +26,7 @@ class SpendHistory extends AbstractDataObject
             $model = match ($data['model_type']) {
                 'club' => Club::fromArray($data['model']),
                 'organization' => Organization::fromArray($data['model']),
+                'media_organization' => MediaOrganization::fromArray($data['model']),
                 default => throw new Exception('Invalid model type'),
             };
         }
