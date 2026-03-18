@@ -1,5 +1,14 @@
 # ChangeLog
 
+## v1.5.2 - 2026-03-18
+
+### What's Changed
+
+* add media organization to fan association by @alhaji-aki in https://github.com/velocitysportslabs/datacenter-php-sdk/pull/115
+* Bump ramsey/composer-install from 3 to 4 by @dependabot[bot] in https://github.com/velocitysportslabs/datacenter-php-sdk/pull/114
+
+**Full Changelog**: https://github.com/velocitysportslabs/datacenter-php-sdk/compare/v1.5.1...v1.5.2
+
 ## v1.5.1 - 2026-03-02
 
 **Full Changelog**: https://github.com/velocitysportslabs/datacenter-php-sdk/compare/v1.5.0...v1.5.1
