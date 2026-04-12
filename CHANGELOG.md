@@ -1,5 +1,14 @@
 # ChangeLog
 
+## v1.6.0 - 2026-04-12
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 2.5.0 to 3.0.0 by @dependabot[bot] in https://github.com/velocitysportslabs/datacenter-php-sdk/pull/117
+* Add PHP 8.5 to the testing matrix in GitHub Actions by @alhaji-aki in https://github.com/velocitysportslabs/datacenter-php-sdk/pull/118
+
+**Full Changelog**: https://github.com/velocitysportslabs/datacenter-php-sdk/compare/v1.5.3...v1.6.0
+
 ## v1.5.3 - 2026-03-18
 
 ### What's Changed
