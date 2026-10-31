@@ -1,5 +1,13 @@
 # ChangeLog
 
+## v1.6.2 - 2026-10-31
+
+### What's Changed
+
+* added support for teams in organization requests by @alhaji-aki in https://github.com/velocitysportslabs/datacenter-php-sdk/pull/121
+
+**Full Changelog**: https://github.com/velocitysportslabs/datacenter-php-sdk/compare/v1.6.1...v1.6.2
+
 ## v1.6.1 - 2026-09-25
 
 ### What's Changed
