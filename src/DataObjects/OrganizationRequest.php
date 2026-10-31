@@ -20,7 +20,7 @@ class OrganizationRequest extends AbstractDataObject
         public readonly ?array $reasons,
         public readonly DateTime $createdAt,
         public readonly ?Country $country = null,
-        public readonly Club|Organization|Association|MediaOrganization|null $model = null,
+        public readonly Club|Organization|Association|MediaOrganization|Team|null $model = null,
     ) {}
 
     /**
@@ -35,6 +35,7 @@ class OrganizationRequest extends AbstractDataObject
                 'club' => Club::fromArray($data['model']),
                 'organization' => Organization::fromArray($data['model']),
                 'media_organization' => MediaOrganization::fromArray($data['model']),
+                'team' => Team::fromArray($data['model']),
                 default => throw new Exception('Invalid model type'),
             };
         }
@@ -43,7 +44,7 @@ class OrganizationRequest extends AbstractDataObject
             uuid: $data['uuid'],
             organizationName: $data['organization_name'],
             modelType: $data['model_type'] ?? null,
-            type: $data['type'] ?? [],
+            type: $data['type'] ?? null,
             location: $data['location'],
             name: $data['name'],
             email: $data['email'],
